@@ -4,6 +4,10 @@ public class RangeHandler {
 
     private int end;
 
+    private int currentPageStart;
+
+    private int currentPageEnd;
+
     public RangeHandler(int start, int end){
         this.end = end;
         this.start = start;

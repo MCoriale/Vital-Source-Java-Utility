@@ -104,4 +104,14 @@ public class KeyBoardInteractor {
         return valueInASCII;
     }
 
+    public void translateStringToKeyStrokes(String stringToTranslate){
+        for(int i = 0; i < stringToTranslate.length(); i++){
+            char current = stringToTranslate.charAt(i);
+            int asciiValue = current;
+            this.keyboardRobot.keyPress(asciiValue);
+            this.keyboardRobot.keyRelease(asciiValue);
+            this.keyboardRobot.delay(100);
+        }
+    }
+
 }
